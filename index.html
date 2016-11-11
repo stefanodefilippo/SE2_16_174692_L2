@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+    Warehouse manager
+    </title>
+</head>
+<body>
+    <h1>Welcome to the warehouse manager!</h1>
+<table border="1" id = "products">
+  <tr>
+    <td>Item1</td>
+    <td>Item2</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>4</td>
+  </tr>
+</table>
+    <p>Maximum storage space: <label id = "limit"> 30 </label>
+    <button onclick="getElementById('change').hidden = false">Change</button>
+    </p>
+    <p id = "change" hidden>
+    New storage space:
+    <br>
+    <input type="text" id = "space">
+    <br>
+    <button onclick="limitStorage()">Ok</button>
+    </p>
+    <button onclick="getElementById('add').hidden = false">Add product</button>
+    <br>
+    <p id = "add" hidden>
+    Name:
+    <br>
+    <input type="text" id = "product">
+    <br>
+    Quantity:
+    <br>
+    <input type="text" id = "quantity">
+    <br>
+    <button onclick="addProduct()">Ok</button>
+    </p>
+    <script src = script.js></script>
+</body>
+</html>
