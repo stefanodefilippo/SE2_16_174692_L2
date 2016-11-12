@@ -14,7 +14,15 @@ limit = parseInt(document.getElementById("limit").innerHTML);
  */
 function addProduct(){
     var prod = document.getElementById("product").value;
+    if(prod == ""){
+        alert("Insert product name!");
+        return;
+    }
     var quantity = parseInt(document.getElementById("quantity").value);
+    if(isNaN(quantity)){
+        alert("Insert an integer as product quantity!");
+        return;
+    }
             for (var c = 0, m = t.rows[0].cells.length; c < m; c++) {
                 if(t.rows[0].cells[c].innerHTML == prod){
                     t.rows[1].cells[c].innerHTML = quantity + parseInt(t.rows[1].cells[c].innerHTML);
@@ -47,6 +55,10 @@ function calculateStorage(){
  */
 function limitStorage(){
     limit = parseInt(document.getElementById("space").value);
+    if(isNaN(limit)){
+        alert("Insert an integer as storage limit!");
+        return;
+    }
     document.getElementById("limit").innerHTML = limit;
     calculateStorage();
 }
